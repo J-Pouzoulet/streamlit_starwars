@@ -2,4 +2,3 @@ streamlit
 pandas
 numpy
 requests
-json==3.0
