@@ -4,7 +4,7 @@ import numpy as np
 import requests as rq
 import json
 
-st.image('../data/wallpaper.jpg')
+st.image('https://www.pixelstalk.net/wp-content/uploads/images6/4K-Star-Wars-HD-Wallpaper-Free-download-768x432.jpg')
 
 st.title(f'Hello *Geeks!!!* :sunglasses:')
 
