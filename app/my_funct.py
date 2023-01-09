@@ -15,10 +15,10 @@ def get_data_film(res, res_name):
     return res_name
 
 
-def create_file(option, text_input):
+def create_file(option, text_input, res_name):
     if option != 'films':
             res = rq.get(f'https://swapi.dev/api/{option}/?search={text_input}').json()
-            res_name = ['None Selected']
+            #res_name = ['None Selected']
             #dict_name = {}
 
             res_name = get_data(res, res_name)
@@ -29,14 +29,14 @@ def create_file(option, text_input):
                         
     else:
         res = rq.get(f'https://swapi.dev/api/{option}/?search={text_input}').json()
-        res_name = ['None Selected']
+        #res_name = ['None Selected']
         #dict_name = {}
 
         res_name = get_data_film(res, res_name)
 
         while res['next'] != None:
             res = rq.get(res['next']).json()
-            res_name = get_data(res, res_name)        
+            res_name = get_data_film(res, res_name)        
             
     return res_name
         
