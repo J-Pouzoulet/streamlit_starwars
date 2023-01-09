@@ -27,7 +27,7 @@ with col2:
 if text_input == '':
     pass
 else: 
-    res_name = create_file(option, text_input)
+    res_name = create_file(option, text_input, res_name)
     res_name = tuple(res_name)
     
     selection = st.selectbox(
